@@ -22,7 +22,10 @@
 .\" not be used in advertising or otherwise to promote the sale, use or
 .\" other dealings in this Software without prior written authorization
 .\" from The Open Group.
-.TH APPRES 1 "Release 6.4" "X Version 11"
+.\"
+.\" $XFree86: xc/programs/appres/appres.man,v 1.8 2001/12/14 20:00:38 dawes Exp $
+.\"
+.TH APPRES 1 __xorgversion__
 .SH NAME
 appres \- list X application resource database
 .SH SYNOPSIS
@@ -84,6 +87,6 @@ use the \-1 option.  For example,
 will list the resources matching the \fIxterm\fP vt100 widget.
 .SH "SEE ALSO"
 .PP
-X(1), xrdb(1), listres(1)
+X(__miscmansuffix__), xrdb(1), listres(1)
 .SH AUTHOR
 Jim Fulton, MIT X Consortium
