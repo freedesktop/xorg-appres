@@ -27,8 +27,11 @@ in this Software without prior written authorization from The Open Group.
  * Author:  Jim Fulton, MIT X Consortium
  */
 
+/* $XFree86: xc/programs/appres/appres.c,v 1.4 2001/12/14 20:00:38 dawes Exp $ */
+
 #include <X11/Intrinsic.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #define NONAME "-AppResTest-"
 
@@ -36,7 +39,8 @@ char *ProgramName;
 
 XrmQuark XrmQString;
 
-static void usage ()
+static void 
+usage (void)
 {
     fprintf (stderr,
 	     "usage:  %s  [class [instance]] [-1] [toolkitoptions]\n",
@@ -49,10 +53,10 @@ static void usage ()
 }
 
 /* stolen from Xlib Xrm.c */
-static void PrintBindingQuarkList(bindings, quarks, stream)
-    XrmBindingList      bindings;
-    XrmQuarkList	quarks;
-    FILE		*stream;
+static void 
+PrintBindingQuarkList(XrmBindingList bindings, 
+				  XrmQuarkList quarks,
+				  FILE* stream)
 {
     Bool	firstNameSeen;
 
@@ -70,13 +74,13 @@ static void PrintBindingQuarkList(bindings, quarks, stream)
 /* stolen from Xlib Xrm.c */
 /* output out the entry in correct file syntax */
 /*ARGSUSED*/
-static Bool DumpEntry(db, bindings, quarks, type, value, data)
-    XrmDatabase		*db;
-    XrmBindingList      bindings;
-    XrmQuarkList	quarks;
-    XrmRepresentation   *type;
-    XrmValuePtr		value;
-    XPointer		data;
+static Bool 
+DumpEntry(XrmDatabase *db, 
+	  XrmBindingList bindings, 
+	  XrmQuarkList quarks, 
+	  XrmRepresentation *type, 
+	  XrmValuePtr value, 
+	  XPointer data)
 {
     FILE			*stream = (FILE *)data;
     register unsigned int	i;
@@ -116,9 +120,8 @@ static Bool DumpEntry(db, bindings, quarks, type, value, data)
     return False;
 }
 
-main (argc, argv)
-    int argc;
-    char **argv;
+int
+main (int argc, char *argv[])
 {
     Widget toplevel;
     char *iname = NONAME, *cname = NONAME;
@@ -171,5 +174,5 @@ main (argc, argv)
 			 names, classes, mode,
 			 DumpEntry, (XPointer)stdout);
 
-    exit (0);
+    return (0);
 }
