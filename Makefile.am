@@ -21,8 +21,8 @@
 
 bin_PROGRAMS = appres
 
-appres_CFLAGS = $(DEP_CFLAGS)
-appres_LDADD = $(DEP_LIBS)
+appres_CFLAGS = $(APPRES_CFLAGS)
+appres_LDADD = $(APPRES_LIBS)
 
 appres_SOURCES =		\
          appres.c
