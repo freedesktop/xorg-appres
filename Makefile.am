@@ -27,5 +27,5 @@ appres_LDADD = $(APPRES_LIBS)
 appres_SOURCES =		\
          appres.c
 
-dist_man_MANS = \
+dist_man1_MANS = \
              appres.man
