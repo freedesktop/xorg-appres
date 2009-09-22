@@ -21,7 +21,7 @@
 
 bin_PROGRAMS = appres
 
-AM_CFLAGS = $(APPRES_CFLAGS)
+AM_CFLAGS = $(APPRES_CFLAGS) $(CWARNFLAGS)
 appres_LDADD = $(APPRES_LIBS)
 
 appres_SOURCES =		\
