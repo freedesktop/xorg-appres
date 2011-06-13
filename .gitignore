@@ -3,7 +3,6 @@
 #		The next section if for module specific patterns
 #
 #	Do not edit the following section
-#	Do not edit the following section
 # 	GNU Build System (Autotools)
 aclocal.m4
 autom4te.cache/
@@ -44,7 +43,6 @@ stamp-h?
 symlink-tree
 texinfo.tex
 ylwrap
-#	Do not edit the following section
 
 #	Do not edit the following section
 # 	Edit Compile Debug Document Distribute
@@ -73,10 +71,9 @@ core
 *.tar.bz2
 *.tar.gz
 #
-#		Edit the following section as needed
-#		Add & Override patterns for appres 
+#		Add & Override patterns for macros
 #
 #		Edit the following section as needed
 # For example, !report.pc overrides *.pc. See 'man gitignore'
-# 
+#
 appres
