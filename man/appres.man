@@ -27,7 +27,7 @@
 appres \- list X application resource database
 .SH SYNOPSIS
 .B "appres"
-[class [instance]] [\-1] [toolkitoptions]
+[class [instance]] [-1] [-V] [toolkitoptions]
 .SH DESCRIPTION
 .PP
 The \fIappres\fP program prints the resources seen by an application
@@ -82,6 +82,8 @@ use the \-1 option.  For example,
 .in -.5i
 .sp 1
 will list the resources matching the \fIxterm\fP vt100 widget.
+.PP
+The -V option prints the appres command version and exits.
 .SH "SEE ALSO"
 .PP
 X(__miscmansuffix__), xrdb(__appmansuffix__), listres(__appmansuffix__)
