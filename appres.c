@@ -35,7 +35,7 @@ static char *ProgramName;
 
 static XrmQuark XrmQString;
 
-static void 
+static void _X_NORETURN
 usage (void)
 {
     fprintf (stderr,
