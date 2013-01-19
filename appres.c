@@ -39,12 +39,10 @@ static void _X_NORETURN
 usage (void)
 {
     fprintf (stderr,
-	     "usage:  %s  [class [instance]] [-1] [toolkitoptions]\n",
+	     "usage:  %s  [class [instance]] [-1] [toolkitoptions]\n"
+	     "-1      list resources only at the specified level\n"
+             "The number of class and instance elements must be equal.\n",
 	     ProgramName);
-    fprintf (stderr,
-	     "-1      list resources only at the specified level\n");
-    fprintf (stderr,
-	     "The number of class and instance elements must be equal.\n");
     exit (1);
 }
 
